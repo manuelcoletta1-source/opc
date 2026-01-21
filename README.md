@@ -111,6 +111,5 @@ Autore e Fondatore
 Manuel Coletta
 OPC · HERMETICUM B.C.E.
 
----
 
 
