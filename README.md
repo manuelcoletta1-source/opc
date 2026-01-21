@@ -1,54 +1,116 @@
-# OPC — Opponibilità Policy Computabile (Hermeticum B.C.E.)
+# OPC — Opponibility Policy Controller (STRONG)
 
-OPC è il **nodo BCE** che rende una policy **opponibile**:
-non solo dichiarata, ma dimostrabile, verificabile e difendibile nel tempo.
+**OPC** è il **motore di policy computabile** dell’ecosistema **HERMETICUM B.C.E.**  
+Decide in modo automatico e **fail-closed** se una prova digitale è **opponibile (ALLOW)** oppure **rigettata (DENY)**.
 
----
-
-## Nodi Pubblici (GitHub Pages)
-
-- **OPC (Pages)**  
-  https://manuelcoletta1-source.github.io/opc/
-
-- **Services (HUB)**  
-  https://manuelcoletta1-source.github.io/hermeticum-bce-services/
-
-- **Technology**  
-  https://manuelcoletta1-source.github.io/Hermeticum-B.C.E.-Technology/
+OPC **non genera prove**:  
+👉 **valida**, **verifica** e **decide**.
 
 ---
 
-## Scopo
+## Ruolo nell’Ecosistema
 
-- Rendere opponibili policy e decisioni
-- Collegare decisione → costo → traccia → tempo
-- Produrre evidenze verificabili
-- Integrarsi con UNEBDO e C2
+OPC opera come **gate logico-giuridico** tra:
 
----
+- **UNEBDO** → genera il manifest e la prova crittografica  
+- **OPC** → verifica e decide (ALLOW / DENY)  
+- **GitJoker** → automatizza audit ed enforcement (CI)
 
-## Struttura consigliata del repo
+Schema:
 
-- `/index.html` — pagina pubblica
-- `/policies/` — policy computabili
-- `/evidence/` — prove e riferimenti
-- `/checks/` — logiche di verifica
-- `/docs/` — specifiche e note
+Evento → UNEBDO (proof) → OPC (policy) → ESITO
 
 ---
 
-## Relazioni BCE
+## Modalità Attiva: OPC STRONG
 
-- **UNEBDO** → validità
-- **OPC** → opponibilità
-- **GitJoker-C2** → esecuzione
+OPC è configurato in **STRONG mode**.
+
+### Regola fondamentale
+> **ALLOW solo se TUTTO è valido**  
+> Qualsiasi errore, mancanza o incoerenza → **DENY**
+
+### Controlli eseguiti
+- Presenza dei campi minimi del manifest UNEBDO
+- Verifica **hash SHA-512** del manifest canonicalizzato
+- Verifica **firma Ed25519** sul manifest canonicalizzato
+- Coerenza strutturale dei dati
 
 ---
 
-## Stato
+## Output (Audit)
 
-🟢 ATTIVO — sviluppo controllato
+OPC produce un **report di decisione** auditabile:
+
+```json
+{
+  "decision": "ALLOW",
+  "reasons": [],
+  "checked_at": "2026-01-21T12:00:00Z"
+}
+
+In caso di errore:
+
+{
+  "decision": "DENY",
+  "reasons": ["signature_invalid"],
+  "checked_at": "2026-01-21T12:00:00Z"
+}
+
 
 ---
 
-© Hermeticum B.C.E. — Manuel Coletta
+Fail-Closed by Design
+
+Nessun default permissivo
+
+Nessuna assunzione implicita
+
+Nessun auto-apprendimento normativo
+
+
+Se qualcosa non torna → DENY.
+
+
+---
+
+Implementazione
+
+L’implementazione esecutiva di OPC è integrata nel software UNEBDO:
+
+🔗 https://manuelcoletta1-source.github.io/unebdo/software/
+
+Il codice vive nel repository unebdo, insieme a:
+
+UNEBDO Core
+
+CLI
+
+test
+
+GitJoker (CI/Audit)
+
+
+Questo repository OPC è una vetrina documentale.
+
+
+---
+
+Stato
+
+🟢 ATTIVO — OPC STRONG
+Policy computabile operativa
+Verifica crittografica attiva
+Fail-closed enforcement
+
+
+---
+
+Autore e Fondatore
+
+Manuel Coletta
+OPC · HERMETICUM B.C.E.
+
+---
+
+
