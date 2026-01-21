@@ -1,96 +1,132 @@
-<!DOCTYPE html>
-<html lang="it">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>OPC — Hermeticum B.C.E.</title>
+Perfetto. Qui sotto hai l’index.md NUOVO COMPLETO per OPC, pronto da incollare tale e quale nel repo opc (root).
 
-  <style>
-    body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#0b0b0b;color:#f2f2f2;line-height:1.6}
-    header{padding:44px 20px 26px;text-align:center;border-bottom:1px solid #333}
-    header h1{margin:0;font-size:2.1em;letter-spacing:1px}
-    header p{margin:10px 0 0;color:#aaa}
-    nav{margin:20px auto 0;max-width:1100px;padding:14px 12px;border:1px solid #333;border-radius:12px;text-align:center}
-    nav a{color:#8fd3ff;text-decoration:none;margin:0 7px;white-space:nowrap}
-    nav a:hover{text-decoration:underline}
-    main{max-width:920px;margin:0 auto;padding:36px 20px 48px}
-    h2{border-left:4px solid #888;padding-left:10px;margin-top:38px}
-    ul{list-style:none;padding-left:0}
-    li{margin:10px 0}
-    .pill{display:inline-block;margin-left:8px;padding:2px 10px;border:1px solid #444;border-radius:999px;font-size:.85em;color:#bbb}
-    .box{border:1px solid #333;border-radius:12px;padding:14px 14px;margin-top:14px;background:#0e0e0e}
-    footer{padding:20px;text-align:center;font-size:.85em;color:#777;border-top:1px solid #333}
-    code{color:#d7ffb2}
-  </style>
-</head>
 
-<body>
+---
 
-<header>
-  <h1>OPC</h1>
-  <p>Opponibilità Policy Computabile — nodo BCE</p>
-  <p>Hermeticum B.C.E. (Blindata · Computabile · Evolutiva)</p>
-</header>
+# OPC — Opponibility Policy Controller
 
-<nav aria-label="BCE Global Navigation">
-  <a href="/hermeticum-bce-services/">Services</a> |
-  <a href="/Hermeticum-B.C.E.-Technology/">Technology</a> |
-  <a href="/gitjoker-c2/">GitJoker-C2</a> |
-  <a href="/ue-ipr-registry/">UE IPR Registry</a> |
-  <a href="/esoterologia-edizioni-ipr5/">Esoterologia Edizioni</a> |
-  <a href="/corpus-esoterologia-ermetica/">Corpus</a> |
-  <a href="/apocalipsis/">Apocalipsis</a>
-</nav>
+**OPC** è il **motore di policy computabile** dell’ecosistema HERMETICUM B.C.E.  
+Decide in modo automatico e **fail-closed** se una prova digitale è **opponibile** oppure **rigettata**.
 
-<main>
+OPC **non genera prove**:  
+👉 **valida**, **verifica** e **decide**.
 
-  <h2>Cos’è OPC</h2>
-  <p>
-    <strong>OPC</strong> è il layer di <strong>opponibilità tecnica</strong> delle policy:
-    traduce regole e decisioni in condizioni verificabili, dimostrabili e opponibili
-    nel tempo.
-  </p>
+---
 
-  <div class="box">
-    <strong>Funzione chiave</strong>
-    <ul>
-      <li>• Rendere una policy <em>opponibile</em> (non solo dichiarata)</li>
-      <li>• Collegare decisione → costo → traccia → tempo</li>
-      <li>• Fornire evidenza tecnica in caso di verifica o conflitto</li>
-      <li>• Integrare policy con UNEBDO (validità) e C2 (esecuzione)</li>
-    </ul>
-  </div>
+## Ruolo nell’Ecosistema
 
-  <h2>Componenti</h2>
-  <ul>
-    <li><strong>Policy Definition</strong> <span class="pill">rules</span> — regole formali</li>
-    <li><strong>Applicability Layer</strong> <span class="pill">scope</span> — chi/quando/dove</li>
-    <li><strong>Evidence Binding</strong> <span class="pill">proof</span> — hash, timestamp</li>
-    <li><strong>Opposition Check</strong> <span class="pill">verify</span> — verifica opponibilità</li>
-  </ul>
+OPC opera come **gate logico-giuridico** tra:
 
-  <h2>Relazione con gli altri nodi</h2>
-  <ul>
-    <li><strong>UNEBDO</strong> → definisce validità giuridico-computabile</li>
-    <li><strong>OPC</strong> → rende la policy opponibile</li>
-    <li><strong>GitJoker-C2</strong> → applica / orchestra</li>
-  </ul>
+- **UNEBDO** → genera il manifest e la prova crittografica  
+- **OPC** → verifica e decide (ALLOW / DENY)  
+- **GitJoker** → automatizza audit e enforcement (CI)
 
-  <h2>Standard BCE</h2>
-  <p>
-    Navigazione inter-repo con <code>/repo/</code>, slash finale, path case-sensitive.
-    OPC è nodo autonomo integrato nel portale Services.
-  </p>
+Schema concettuale:
 
-  <h2>Stato</h2>
-  <p>🟢 <strong>ATTIVO</strong> — nodo in costruzione controllata</p>
+Evento → UNEBDO (proof) → OPC (policy) → ESITO
 
-</main>
+---
 
-<footer>
-  © Hermeticum B.C.E. — Manuel Coletta<br/>
-  OPC — Opponibilità Policy Computabile
-</footer>
+## OPC STRONG (Modalità attiva)
 
-</body>
-</html>
+OPC è configurato in modalità **STRONG**.
+
+### Regola fondamentale
+> **ALLOW solo se TUTTO è valido**  
+> Qualsiasi errore, mancanza o incoerenza → **DENY**
+
+### Controlli eseguiti
+- Presenza campi minimi del manifest UNEBDO
+- Verifica **hash SHA-512** del manifest canonicalizzato
+- Verifica **firma Ed25519** sul manifest canonicalizzato
+- Coerenza strutturale dei dati
+
+---
+
+## Output (Audit)
+
+OPC produce un **report di decisione**:
+
+```json
+{
+  "decision": "ALLOW",
+  "reasons": [],
+  "checked_at": "2026-01-21T12:00:00Z"
+}
+
+Oppure, in caso di errore:
+
+{
+  "decision": "DENY",
+  "reasons": ["signature_invalid"],
+  "checked_at": "2026-01-21T12:00:00Z"
+}
+
+Questo output è auditabile, ripetibile e verificabile offline.
+
+
+---
+
+Fail-Closed Policy
+
+OPC è progettato per fallire in sicurezza:
+
+nessun default permissivo
+
+nessuna assunzione implicita
+
+nessun auto-apprendimento normativo
+
+
+Se qualcosa non torna → DENY.
+
+
+---
+
+Implementazione
+
+L’implementazione esecutiva di OPC è integrata nel software UNEBDO:
+
+🔗 UNEBDO Software (Core + OPC)
+https://manuelcoletta1-source.github.io/unebdo/software/
+
+Il codice vive nel repository unebdo, insieme a:
+
+UNEBDO Core
+
+CLI
+
+test
+
+GitJoker (CI/Audit)
+
+
+Questo repository OPC è una vetrina documentale.
+
+
+---
+
+Stato
+
+🟢 ATTIVO — OPC STRONG
+Policy computabile operativa
+Verifica crittografica attiva
+Fail-closed enforcement
+
+
+---
+
+Autore e Fondatore
+
+Manuel Coletta
+OPC · HERMETICUM B.C.E.
+
+---
+
+### Commit da usare
+
+docs: replace OPC index with STRONG canonical page
+
+Quando è online, dimmi **“ok”**.  
+Il prossimo step naturale sarà: **esempio OPC live collegato a UNEBDO** (una prova che passa / una che viene negata).
+
