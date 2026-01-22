@@ -1,73 +1,89 @@
-# OPC — Operational Policy Core
-## Governance tecnica dell’ecosistema Hermeticum B.C.E. (UE)
+# OPC
+## Opponible Public Choice  
+### Voto Digitale Opponibile su base IPR (UE)
 
 ---
 
-## Cos’è OPC
-**OPC (Operational Policy Core)** è il **nucleo di policy operativa**
-dell’ecosistema **Hermeticum B.C.E.**.
+## Definizione
+**OPC** è il sistema di **voto digitale opponibile**
+dell’ecosistema Hermeticum B.C.E.
 
-Definisce le **regole tecniche**, i **vincoli di coerenza** e i
-**criteri di governance** che rendono operativi e verificabili
-i sistemi basati su IPR, GitJoker e AI sotto controllo umano.
-
----
-
-## Ruolo nell’ecosistema
-OPC:
-- stabilisce **policy operative comuni**
-- garantisce coerenza tra identità, sistemi e decisioni
-- supporta la governance di:
-  - GitJoker (framework per programmatori)
-  - UNEBDO (dispositivo di tracciabilità)
-  - IPR (Identity Primary Records)
-
-OPC **non esegue** e **non decide**.  
-Definisce **il perimetro entro cui è lecito operare**.
+Il voto OPC non deriva la propria forza dal consenso,
+ma dall’<strong>identità primaria (IPR)</strong>
+di chi vota.
 
 ---
 
-## Perché è necessario
-Senza un nucleo di policy:
-- i sistemi divergono
-- le decisioni non sono confrontabili
-- la compliance decade nel tempo
+## Il potere del voto
+Nel voto OPC:
+- non vota un account
+- non vota un ruolo
+- non vota una massa
 
-OPC introduce **vincoli tecnici stabili**, non interpretazioni.
+<strong>Vota un’identità opponibile.</strong>
+
+L’IPR rende il voto:
+- attribuibile
+- verificabile
+- responsabile
+- opponibile nel tempo
+
+---
+
+## Differenza rispetto al voto tradizionale
+Il voto tradizionale:
+- conta
+- aggrega
+- si chiude
+
+Il voto OPC:
+- decide
+- lascia traccia
+- resta opponibile
+- può decadere
+
+---
+
+## Griglia disciplinare
+Ogni voto OPC rispetta:
+- **Decisione** — selezione irreversibile
+- **Costo** — temporale, energetico, identitario
+- **Traccia** — evidenza opponibile
+- **Tempo** — validità e decadenza
+
+Senza uno di questi elementi,
+il voto non è valido.
+
+---
+
+## Relazione con l’ecosistema
+- **IPR** → titolarità del voto
+- **Io-Space** → contesto e spazio decisionale
+- **UNEBDO** → tempo ed evidenza
+- **CyberGlobal** → sicurezza del processo
 
 ---
 
 ## Ambito UE
-OPC è progettato per essere compatibile con:
-- **AI Act UE** — governance e controllo umano
-- **NIS2 / CER** — responsabilità e prevenzione
-- **Horizon Europe** — metodologia e tracciabilità progettuale
+OPC è progettato per:
+- governance digitale sperimentale
+- progetti **Horizon Europe**
+- contesti decisionali non statali
+- audit e accountability
+
+Non sostituisce il voto pubblico istituzionale,
+ma introduce una forma di
+<strong>voto opponibile su base tecnica</strong>.
 
 ---
 
-## Relazioni principali
-- **GitJoker** → applica le policy in fase operativa
-- **UNEBDO** → traccia e ancora le evidenze
-- **IPR Registry** → identifica titolari e continuità
-
----
-
-## Stato del progetto
+## Stato
 - **Stato:** ATTIVO
-- **Categoria:** Policy Core / Governance tecnica
+- **Categoria:** Digital Opponible Voting System
+- **Base:** Identity Primary Record (IPR)
 - **Livello:** UE-ready / Horizon-compatible
 
 ---
 
-## Riferimenti
-- OPC (pagina pubblica): https://manuelcoletta1-source.github.io/opc/
-- GitJoker: https://manuelcoletta1-source.github.io/gitjoker-c2/
-- UNEBDO: https://manuelcoletta1-source.github.io/unebdo/
-- Registro UE IPR: https://manuelcoletta1-source.github.io/ue-ipr-registry/
-
----
-
-© Hermeticum B.C.E. S.r.l. — Manuel Coletta  
-OPC · Operational Policy Core
-
-
+© 2026 — **HERMETICUM B.C.E. S.r.l.**  
+Fondatore: **Manuel Coletta**
