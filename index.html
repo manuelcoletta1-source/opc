@@ -1,132 +1,103 @@
-Perfetto. Qui sotto hai l’index.md NUOVO COMPLETO per OPC, pronto da incollare tale e quale nel repo opc (root).
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>OPC — Operational Policy Core (UE)</title>
+  <meta name="description" content="OPC è il nucleo di policy operativa dell’ecosistema Hermeticum B.C.E. Definisce regole, vincoli e coerenza operativa per sistemi UE, IPR e AI sotto controllo umano." />
+  <meta name="robots" content="index, follow" />
 
+  <style>
+    :root { color-scheme: dark; }
+    body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; background:#0b0c10; color:#e8e8e8; }
+    header, main, footer { max-width: 1040px; margin: 0 auto; padding: 24px; }
+    .card { background:#0f1117; border:1px solid #24262b; border-radius:16px; padding:20px; margin-bottom:16px; }
+    h1 { margin:0 0 6px 0; font-size:30px; }
+    h2 { margin:22px 0 10px 0; font-size:20px; }
+    p { margin:8px 0; line-height:1.55; color:#cfd2d6; }
+    ul { margin:8px 0 8px 18px; color:#cfd2d6; }
+    li { margin:6px 0; }
+    a { color:#d6b8ff; text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    .meta { font-size:13px; color:#9aa2aa; }
+    .tag { display:inline-block; padding:4px 10px; border:1px solid #24262b; border-radius:999px; font-size:12px; background:#0b0c10; color:#cfd2d6; margin-right:6px; }
+    .btn { display:inline-block; padding:10px 14px; border-radius:12px; border:1px solid #24262b; background:#0b0c10; margin:6px 6px 0 0; }
+  </style>
+</head>
 
----
+<body>
 
-# OPC — Opponibility Policy Controller
+<header>
+  <div class="card">
+    <h1>OPC</h1>
+    <p class="meta">Operational Policy Core · Governance tecnica · UE</p>
 
-**OPC** è il **motore di policy computabile** dell’ecosistema HERMETICUM B.C.E.  
-Decide in modo automatico e **fail-closed** se una prova digitale è **opponibile** oppure **rigettata**.
+    <p>
+      <strong>OPC</strong> è il <strong>nucleo di policy operativa</strong> dell’ecosistema Hermeticum B.C.E.
+      Definisce regole, vincoli e criteri di coerenza che governano
+      l’operatività di sistemi, nodi e AI sotto responsabilità umana.
+    </p>
 
-OPC **non genera prove**:  
-👉 **valida**, **verifica** e **decide**.
+    <div>
+      <span class="tag">Policy Core</span>
+      <span class="tag">UE-ready</span>
+      <span class="tag">IPR-aware</span>
+      <span class="tag">AI Governance</span>
+    </div>
 
----
+    <div>
+      <a class="btn" href="./README.md">README</a>
+      <a class="btn" href="https://manuelcoletta1-source.github.io/gitjoker-c2/">GitJoker</a>
+      <a class="btn" href="https://manuelcoletta1-source.github.io/unebdo/">UNEBDO</a>
+      <a class="btn" href="https://manuelcoletta1-source.github.io/ue-ipr-registry/">Registro UE IPR</a>
+    </div>
+  </div>
+</header>
 
-## Ruolo nell’Ecosistema
+<main>
 
-OPC opera come **gate logico-giuridico** tra:
+  <section class="card">
+    <h2>Ruolo di OPC</h2>
+    <ul>
+      <li>definisce le <strong>policy operative</strong> dell’ecosistema</li>
+      <li>stabilisce <strong>vincoli tecnici</strong> e non narrativi</li>
+      <li>garantisce coerenza tra identità, sistemi e decisioni</li>
+      <li>opera a supporto di GitJoker e UNEBDO</li>
+    </ul>
+  </section>
 
-- **UNEBDO** → genera il manifest e la prova crittografica  
-- **OPC** → verifica e decide (ALLOW / DENY)  
-- **GitJoker** → automatizza audit e enforcement (CI)
+  <section class="card">
+    <h2>Cosa NON fa</h2>
+    <ul>
+      <li>non prende decisioni operative</li>
+      <li>non sostituisce autorità umane o istituzionali</li>
+      <li>non esegue codice</li>
+    </ul>
+    <p class="meta">
+      OPC definisce il perimetro. L’operazione avviene altrove.
+    </p>
+  </section>
 
-Schema concettuale:
+  <section class="card">
+    <h2>Allineamento UE</h2>
+    <ul>
+      <li>AI Act — governance e controllo umano</li>
+      <li>NIS2 / CER — prevenzione e responsabilità</li>
+      <li>Horizon Europe — metodologia e tracciabilità</li>
+    </ul>
+  </section>
 
-Evento → UNEBDO (proof) → OPC (policy) → ESITO
+</main>
 
----
+<footer>
+  <div class="card">
+    <p class="meta">
+      © 2026 — HERMETICUM B.C.E. S.r.l. — Manuel Coletta<br/>
+      OPC · Operational Policy Core
+    </p>
+  </div>
+</footer>
 
-## OPC STRONG (Modalità attiva)
-
-OPC è configurato in modalità **STRONG**.
-
-### Regola fondamentale
-> **ALLOW solo se TUTTO è valido**  
-> Qualsiasi errore, mancanza o incoerenza → **DENY**
-
-### Controlli eseguiti
-- Presenza campi minimi del manifest UNEBDO
-- Verifica **hash SHA-512** del manifest canonicalizzato
-- Verifica **firma Ed25519** sul manifest canonicalizzato
-- Coerenza strutturale dei dati
-
----
-
-## Output (Audit)
-
-OPC produce un **report di decisione**:
-
-```json
-{
-  "decision": "ALLOW",
-  "reasons": [],
-  "checked_at": "2026-01-21T12:00:00Z"
-}
-
-Oppure, in caso di errore:
-
-{
-  "decision": "DENY",
-  "reasons": ["signature_invalid"],
-  "checked_at": "2026-01-21T12:00:00Z"
-}
-
-Questo output è auditabile, ripetibile e verificabile offline.
-
-
----
-
-Fail-Closed Policy
-
-OPC è progettato per fallire in sicurezza:
-
-nessun default permissivo
-
-nessuna assunzione implicita
-
-nessun auto-apprendimento normativo
-
-
-Se qualcosa non torna → DENY.
-
-
----
-
-Implementazione
-
-L’implementazione esecutiva di OPC è integrata nel software UNEBDO:
-
-🔗 UNEBDO Software (Core + OPC)
-https://manuelcoletta1-source.github.io/unebdo/software/
-
-Il codice vive nel repository unebdo, insieme a:
-
-UNEBDO Core
-
-CLI
-
-test
-
-GitJoker (CI/Audit)
-
-
-Questo repository OPC è una vetrina documentale.
-
-
----
-
-Stato
-
-🟢 ATTIVO — OPC STRONG
-Policy computabile operativa
-Verifica crittografica attiva
-Fail-closed enforcement
-
-
----
-
-Autore e Fondatore
-
-Manuel Coletta
-OPC · HERMETICUM B.C.E.
-
----
-
-### Commit da usare
-
-docs: replace OPC index with STRONG canonical page
-
-Quando è online, dimmi **“ok”**.  
-Il prossimo step naturale sarà: **esempio OPC live collegato a UNEBDO** (una prova che passa / una che viene negata).
+</body>
+</html>
 
