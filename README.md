@@ -1,115 +1,73 @@
-# OPC — Opponibility Policy Controller (STRONG)
-
-**OPC** è il **motore di policy computabile** dell’ecosistema **HERMETICUM B.C.E.**  
-Decide in modo automatico e **fail-closed** se una prova digitale è **opponibile (ALLOW)** oppure **rigettata (DENY)**.
-
-OPC **non genera prove**:  
-👉 **valida**, **verifica** e **decide**.
+# OPC — Operational Policy Core
+## Governance tecnica dell’ecosistema Hermeticum B.C.E. (UE)
 
 ---
 
-## Ruolo nell’Ecosistema
+## Cos’è OPC
+**OPC (Operational Policy Core)** è il **nucleo di policy operativa**
+dell’ecosistema **Hermeticum B.C.E.**.
 
-OPC opera come **gate logico-giuridico** tra:
-
-- **UNEBDO** → genera il manifest e la prova crittografica  
-- **OPC** → verifica e decide (ALLOW / DENY)  
-- **GitJoker** → automatizza audit ed enforcement (CI)
-
-Schema:
-
-Evento → UNEBDO (proof) → OPC (policy) → ESITO
+Definisce le **regole tecniche**, i **vincoli di coerenza** e i
+**criteri di governance** che rendono operativi e verificabili
+i sistemi basati su IPR, GitJoker e AI sotto controllo umano.
 
 ---
 
-## Modalità Attiva: OPC STRONG
+## Ruolo nell’ecosistema
+OPC:
+- stabilisce **policy operative comuni**
+- garantisce coerenza tra identità, sistemi e decisioni
+- supporta la governance di:
+  - GitJoker (framework per programmatori)
+  - UNEBDO (dispositivo di tracciabilità)
+  - IPR (Identity Primary Records)
 
-OPC è configurato in **STRONG mode**.
-
-### Regola fondamentale
-> **ALLOW solo se TUTTO è valido**  
-> Qualsiasi errore, mancanza o incoerenza → **DENY**
-
-### Controlli eseguiti
-- Presenza dei campi minimi del manifest UNEBDO
-- Verifica **hash SHA-512** del manifest canonicalizzato
-- Verifica **firma Ed25519** sul manifest canonicalizzato
-- Coerenza strutturale dei dati
+OPC **non esegue** e **non decide**.  
+Definisce **il perimetro entro cui è lecito operare**.
 
 ---
 
-## Output (Audit)
+## Perché è necessario
+Senza un nucleo di policy:
+- i sistemi divergono
+- le decisioni non sono confrontabili
+- la compliance decade nel tempo
 
-OPC produce un **report di decisione** auditabile:
-
-```json
-{
-  "decision": "ALLOW",
-  "reasons": [],
-  "checked_at": "2026-01-21T12:00:00Z"
-}
-
-In caso di errore:
-
-{
-  "decision": "DENY",
-  "reasons": ["signature_invalid"],
-  "checked_at": "2026-01-21T12:00:00Z"
-}
-
+OPC introduce **vincoli tecnici stabili**, non interpretazioni.
 
 ---
 
-Fail-Closed by Design
-
-Nessun default permissivo
-
-Nessuna assunzione implicita
-
-Nessun auto-apprendimento normativo
-
-
-Se qualcosa non torna → DENY.
-
+## Ambito UE
+OPC è progettato per essere compatibile con:
+- **AI Act UE** — governance e controllo umano
+- **NIS2 / CER** — responsabilità e prevenzione
+- **Horizon Europe** — metodologia e tracciabilità progettuale
 
 ---
 
-Implementazione
-
-L’implementazione esecutiva di OPC è integrata nel software UNEBDO:
-
-🔗 https://manuelcoletta1-source.github.io/unebdo/software/
-
-Il codice vive nel repository unebdo, insieme a:
-
-UNEBDO Core
-
-CLI
-
-test
-
-GitJoker (CI/Audit)
-
-
-Questo repository OPC è una vetrina documentale.
-
+## Relazioni principali
+- **GitJoker** → applica le policy in fase operativa
+- **UNEBDO** → traccia e ancora le evidenze
+- **IPR Registry** → identifica titolari e continuità
 
 ---
 
-Stato
-
-🟢 ATTIVO — OPC STRONG
-Policy computabile operativa
-Verifica crittografica attiva
-Fail-closed enforcement
-
+## Stato del progetto
+- **Stato:** ATTIVO
+- **Categoria:** Policy Core / Governance tecnica
+- **Livello:** UE-ready / Horizon-compatible
 
 ---
 
-Autore e Fondatore
+## Riferimenti
+- OPC (pagina pubblica): https://manuelcoletta1-source.github.io/opc/
+- GitJoker: https://manuelcoletta1-source.github.io/gitjoker-c2/
+- UNEBDO: https://manuelcoletta1-source.github.io/unebdo/
+- Registro UE IPR: https://manuelcoletta1-source.github.io/ue-ipr-registry/
 
-Manuel Coletta
-OPC · HERMETICUM B.C.E.
+---
 
+© Hermeticum B.C.E. S.r.l. — Manuel Coletta  
+OPC · Operational Policy Core
 
 
