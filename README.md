@@ -1,89 +1,109 @@
 # OPC
-## Opponible Public Choice  
-### Voto Digitale Opponibile su base IPR (UE)
+## Opponible Policy Core — Software di Hermeticum B.C.E.
+
+**OPC (Opponible Policy Core)** è il **nucleo delle policy opponibili**
+dell’ecosistema **Hermeticum B.C.E.**.
+
+Definisce **regole esplicite, versionate e verificabili**
+che vincolano l’operatività dei moduli IPR
+e rendono l’enforcement **dimostrabile nel tempo**.
+
+OPC non esegue azioni.
+**Definisce le regole che le rendono lecite o illecite.**
 
 ---
 
-## Definizione
-**OPC** è il sistema di **voto digitale opponibile**
-dell’ecosistema Hermeticum B.C.E.
+## Funzione
 
-Il voto OPC non deriva la propria forza dal consenso,
-ma dall’<strong>identità primaria (IPR)</strong>
-di chi vota.
+OPC serve a:
 
----
+- definire policy operative opponibili
+- rendere le regole **esplicite e citabili**
+- mantenere versioning pubblico delle policy
+- fornire base normativa a **UNEBDO**
+- guidare decisioni ex-ante (**IPR-GATE**)
+- supportare valutazioni ex-post (**IPR-COMPLY**)
 
-## Il potere del voto
-Nel voto OPC:
-- non vota un account
-- non vota un ruolo
-- non vota una massa
-
-<strong>Vota un’identità opponibile.</strong>
-
-L’IPR rende il voto:
-- attribuibile
-- verificabile
-- responsabile
-- opponibile nel tempo
+Senza OPC, l’enforcement è opaco.
+Con OPC, l’enforcement è **verificabile**.
 
 ---
 
-## Differenza rispetto al voto tradizionale
-Il voto tradizionale:
-- conta
-- aggrega
-- si chiude
+## Cosa fa / Cosa non fa
 
-Il voto OPC:
-- decide
-- lascia traccia
-- resta opponibile
-- può decadere
+**Fa**
+- definisce policy e vincoli operativi
+- versiona le policy in modo deterministico
+- rende le regole opponibili nel tempo
+- abilita audit delle regole applicate
+- supporta fail-closed come requisito di policy
 
----
-
-## Griglia disciplinare
-Ogni voto OPC rispetta:
-- **Decisione** — selezione irreversibile
-- **Costo** — temporale, energetico, identitario
-- **Traccia** — evidenza opponibile
-- **Tempo** — validità e decadenza
-
-Senza uno di questi elementi,
-il voto non è valido.
+**Non fa**
+- enforcement root (→ UNEBDO)
+- definizione dell’identità (→ IPR-CORE)
+- custodia documentale (→ IPR-VAULT)
+- tracciamento eventi (→ IPR-TRACE)
+- controllo ex-ante (→ IPR-GATE)
+- valutazione di conformità (→ IPR-COMPLY)
+- scambio di valore (→ IPR-EXCHANGE)
+- orchestrazione (→ GitJoker-C2)
 
 ---
 
-## Relazione con l’ecosistema
-- **IPR** → titolarità del voto
-- **Io-Space** → contesto e spazio decisionale
-- **UNEBDO** → tempo ed evidenza
-- **CyberGlobal** → sicurezza del processo
+## Posizione nello stack Hermeticum B.C.E.
+OPC (Policy Core) ↓ UNEBDO (Layer 0 — Enforcement) ↓ IPR + moduli CORE · VAULT · TRACE · GATE · COMPLY · EXCHANGE ↓ GitJoker-C2 / IPR-AIJOKER-C2
+OPC è **a monte** dell’enforcement:
+se la policy non è definita,
+non può essere applicata né verificata.
+
+---
+
+## Principi operativi
+
+- **Policy esplicite, non implicite**
+- **Versioning obbligatorio**
+- **Opponibilità nel tempo**
+- **Audit-by-design**
+- **Fail-closed come default**
+- **UE-first**
+
+Se la regola non è tracciabile,
+**non è opponibile**.
 
 ---
 
 ## Ambito UE
-OPC è progettato per:
-- governance digitale sperimentale
-- progetti **Horizon Europe**
-- contesti decisionali non statali
-- audit e accountability
 
-Non sostituisce il voto pubblico istituzionale,
-ma introduce una forma di
-<strong>voto opponibile su base tecnica</strong>.
+OPC è progettato in coerenza con:
+
+- AI Act UE (governance tecnica, logging)
+- NIS2 / CER (responsabilità e auditabilità)
+- eIDAS / ETSI (integrità e continuità)
+- Horizon Europe (metodologia e verificabilità)
+
+---
+
+## Destinatari
+
+- architetti di governance tecnica
+- auditor e organismi di controllo
+- integrazioni istituzionali UE
+- progettisti di sistemi ad alto rischio
+
+---
+
+## Autore
+
+**Manuel Coletta**
+
+---
+
+## Sigillo editoriale
+
+**Esoterologia Edizioni**
 
 ---
 
 ## Stato
-- **Stato:** ATTIVO
-- **Categoria:** Digital Opponible Voting System
-- **Base:** Identity Primary Record (IPR)
-- **Livello:** UE-ready / Horizon-compatible
 
----
-
-© 2026 — **HERMETICUM B.C.E. S.r.l.**  
-Fondatore: **Manuel Coletta**
+🟢 **ATTIVO — Policy Core di Hermeticum B.C.E.**
