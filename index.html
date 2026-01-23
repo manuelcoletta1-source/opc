@@ -1,100 +1,134 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="it">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>OPC — Opponible Public Choice</title>
-
-  <meta name="description" content="OPC è il sistema di Voto Digitale Opponibile su base IPR: decisioni verificabili, attribuibili e opponibili nel tempo, compatibili con il contesto UE." />
-  <meta name="robots" content="index, follow" />
-
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>OPC — Opponible Policy Core | Hermeticum B.C.E.</title>
+  <meta name="description" content="OPC (Opponible Policy Core): definizione e versioning di policy opponibili per Hermeticum B.C.E., applicate da UNEBDO e usate da IPR-GATE e IPR-COMPLY." />
+  <meta name="author" content="Manuel Coletta" />
+  <meta name="publisher" content="Esoterologia Edizioni" />
   <style>
     :root { color-scheme: dark; }
-    body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; background:#0b0c10; color:#e8e8e8; }
-    header, main, footer { max-width: 1120px; margin: 0 auto; padding: 24px; }
-    .card { background:#0f1117; border:1px solid #24262b; border-radius:18px; padding:22px; margin-bottom:18px; }
-    h1 { margin:0 0 10px 0; font-size:34px; }
-    h2 { margin:22px 0 10px 0; font-size:20px; }
-    p { margin:8px 0; line-height:1.6; color:#cfd2d6; }
-    ul { margin:8px 0 8px 20px; color:#cfd2d6; }
-    li { margin:6px 0; }
-    a { color:#d6b8ff; text-decoration:none; }
-    .meta { font-size:13px; color:#9aa2aa; }
-    .tag { display:inline-block; padding:4px 12px; border:1px solid #24262b; border-radius:999px; font-size:12px; background:#0b0c10; color:#cfd2d6; margin-right:6px; margin-top:6px; }
-    .btn { display:inline-block; padding:10px 14px; border-radius:14px; border:1px solid #24262b; background:#0b0c10; margin:6px 6px 0 0; }
-    .rule { border-left:4px solid #d6b8ff; padding-left:14px; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: #0b0c10;
+      color: #e8e8e8;
+    }
+    header, main, footer {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+    .card {
+      background: #0f1117;
+      border: 1px solid #24262b;
+      border-radius: 18px;
+      padding: 22px;
+      box-shadow: 0 12px 30px rgba(0,0,0,.35);
+    }
+    h1 { font-size: 30px; margin: 0 0 10px; }
+    h2 { font-size: 18px; font-weight: 600; opacity: .9; margin: 0 0 18px; }
+    h3 { font-size: 16px; margin-top: 0; }
+    p { line-height: 1.55; opacity: .95; }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+    @media (min-width: 900px) {
+      .grid { grid-template-columns: 1.2fr .8fr; }
+    }
+    .tag {
+      display: inline-block;
+      font-size: 12px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid #2b2f38;
+      opacity: .85;
+      margin-bottom: 12px;
+    }
+    .btns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 16px;
+    }
+    .btn {
+      border: 1px solid #2b2f38;
+      border-radius: 12px;
+      padding: 10px 14px;
+      background: #111420;
+      color: #9bdcff;
+      text-decoration: none;
+      font-size: 14px;
+    }
+    .btn:hover { text-decoration: underline; }
+    .muted { opacity: .75; font-size: 13px; }
+    footer { text-align: center; }
+    .mono {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+                   "Liberation Mono", "Courier New", monospace;
+    }
   </style>
 </head>
-
 <body>
 
 <header>
   <div class="card">
+    <div class="tag">Policy Core</div>
     <h1>OPC</h1>
-    <p class="meta">Opponible Public Choice · Voto Digitale Opponibile (UE)</p>
-
-    <div class="rule">
-      <p>
-        <strong>OPC</strong> è il sistema di
-        <strong>voto digitale opponibile</strong>
-        fondato sull’<strong>Identity Primary Record (IPR)</strong>.
-      </p>
-      <p class="meta">
-        Il potere del voto non deriva dal numero, ma dall’identità opponibile.
-      </p>
-    </div>
-
-    <div>
-      <span class="tag">OPC</span>
-      <span class="tag">Voto Opponibile</span>
-      <span class="tag">IPR-based</span>
-      <span class="tag">UE-ready</span>
-      <span class="tag">Audit-First</span>
-    </div>
-
-    <div>
+    <h2>Opponible Policy Core · Regole verificabili</h2>
+    <p>
+      OPC definisce <b>policy esplicite, versionate e opponibili</b>
+      per l’ecosistema <b>Hermeticum B.C.E.</b>.
+      Le policy sono applicate da <b>UNEBDO</b> e guidano
+      le decisioni ex-ante (<b>IPR-GATE</b>) e le valutazioni di conformità
+      (<b>IPR-COMPLY</b>).
+    </p>
+    <p class="muted">
+      Regola base: <span class="mono">no policy → no enforcement</span>
+    </p>
+    <div class="btns">
       <a class="btn" href="./README.md">README</a>
-      <a class="btn" href="https://manuelcoletta1-source.github.io/ue-ipr-registry/">Registro UE IPR</a>
-      <a class="btn" href="https://manuelcoletta1-source.github.io/iospace/">Io-Space</a>
-      <a class="btn" href="https://manuelcoletta1-source.github.io/unebdo/">UNEBDO</a>
-      <a class="btn" href="https://manuelcoletta1-source.github.io/cyberglobal/">CyberGlobal</a>
+      <a class="btn" href="../unebdo/">UNEBDO</a>
+      <a class="btn" href="../ipr-gate/">IPR-GATE</a>
+      <a class="btn" href="../ipr-comply/">IPR-COMPLY</a>
+      <a class="btn" href="../gitjoker-c2/">GitJoker-C2</a>
     </div>
   </div>
 </header>
 
-<main>
+<main class="grid">
 
   <section class="card">
-    <h2>Il potere del voto OPC</h2>
+    <h3>Ruolo architetturale</h3>
     <p>
-      Il voto OPC trae il proprio potere dall’<strong>IPR</strong>:
-      ogni voto è attribuito a un’identità primaria verificata,
-      non a un account, non a un profilo, non a una massa.
+      OPC rende l’enforcement dimostrabile:
+      non solo eventi tracciati, ma <b>regole</b>
+      che vincolano le decisioni operative.
     </p>
-    <p>
-      Senza IPR non esiste voto OPC.
+    <p class="muted">
+      Policy esplicite → enforcement verificabile → opponibilità nel tempo.
     </p>
   </section>
 
-  <section class="card">
-    <h2>Funzione UE</h2>
-    <ul>
-      <li>Decisioni opponibili in contesti non statali</li>
-      <li>Governance digitale sperimentale</li>
-      <li>Audit ex post delle decisioni</li>
-      <li>Progetti Horizon Europe</li>
-    </ul>
-  </section>
+  <aside class="card">
+    <h3>Stato</h3>
+    <p class="muted">
+      🟢 ATTIVO<br/>
+      Nucleo delle policy opponibili di Hermeticum B.C.E.
+    </p>
+  </aside>
 
 </main>
 
 <footer>
-  <div class="card">
-    <p class="meta">
-      © 2026 — HERMETICUM B.C.E. S.r.l. — Manuel Coletta<br/>
-      OPC · Opponible Public Choice
-    </p>
-  </div>
+  <p class="muted">
+    © Manuel Coletta<br/>
+    <b>Esoterologia Edizioni</b><br/>
+    OPC · Hermeticum B.C.E.
+  </p>
 </footer>
 
 </body>
