@@ -1,132 +1,251 @@
+<!-- Repo: opc | File: index.html -->
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>OPC — Opponible Policy Core | Hermeticum B.C.E.</title>
-  <meta name="description" content="OPC (Opponible Policy Core): nucleo di policy opponibili, versionate e verificabili per Hermeticum B.C.E. UE-first, audit-by-design, fail-closed." />
-  <meta name="author" content="Manuel Coletta" />
-  <meta name="publisher" content="Esoterologia Edizioni" />
+  <meta name="description" content="OPC (Opponible Policy Core) — policy opponibili UE-first: regole applicate, evidenze verificabili, audit-by-design." />
+  <meta name="theme-color" content="#0b0c10" />
   <style>
-    :root { color-scheme: dark; }
+    :root{
+      --bg:#0b0c10;
+      --panel:#0f1117;
+      --panel2:#0c0d12;
+      --line:#24262b;
+      --text:#e8e8e8;
+      --muted:#a6acb8;
+      --accent:#7cf6c8;
+      --accent2:#8aa2ff;
+      --warn:#ffd37a;
+      --radius:16px;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --max: 980px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+    }
+    *{box-sizing:border-box}
     body{
       margin:0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      font-family:var(--sans);
+      color:var(--text);
       background:
-        radial-gradient(1200px 600px at 15% -10%, rgba(70,160,255,.16), transparent 55%),
-        #0b0c10;
-      color:#e8e8e8;
+        radial-gradient(900px 520px at 25% 0%, rgba(124,246,200,.11), transparent 60%),
+        radial-gradient(900px 520px at 80% 10%, rgba(138,162,255,.10), transparent 60%),
+        var(--bg);
+      line-height:1.45;
     }
-    header, main, footer { max-width: 1100px; margin: 0 auto; padding: 24px; }
-    .card{
-      background: rgba(15,17,23,.78);
-      border: 1px solid #24262b;
-      border-radius: 18px;
-      padding: 22px;
-      box-shadow: 0 12px 30px rgba(0,0,0,.35);
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:var(--max);margin:0 auto;padding:26px 18px 56px}
+
+    header{
+      display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;
+      padding:14px 16px;border-radius:var(--radius);
+      border:1px solid rgba(36,38,43,.9);
+      background: linear-gradient(180deg, rgba(15,17,23,.86), rgba(12,13,18,.70));
+      box-shadow: var(--shadow);
+      position: sticky; top: 14px; z-index: 10;
       backdrop-filter: blur(10px);
     }
-    h1{ font-size: 30px; margin: 0 0 10px; }
-    h2{ font-size: 18px; font-weight: 650; opacity: .9; margin: 0 0 18px; }
-    h3{ font-size: 16px; margin: 0 0 10px; }
-    p{ line-height: 1.55; opacity: .95; margin: 10px 0; }
-    .muted{ opacity: .75; font-size: 13px; }
-    .tag{
-      display:inline-block;
-      font-size: 12px;
-      padding: 6px 10px;
-      border-radius: 999px;
-      border: 1px solid #2b2f38;
-      opacity: .9;
-      margin-bottom: 12px;
+    .brand{display:flex;flex-direction:column;gap:4px}
+    .brand .top{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+    .brand .name{font-weight:900;letter-spacing:.2px}
+    .badge{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:6px 10px;border-radius:999px;
+      border:1px solid rgba(124,246,200,.35);
+      background: rgba(124,246,200,.08);
+      font-size:12px;
+      font-family: var(--mono);
+      white-space: nowrap;
     }
-    .grid{ display:grid; grid-template-columns: 1fr; gap: 14px; }
-    @media (min-width: 900px){ .grid{ grid-template-columns: 1fr 1fr; } }
-    .btns{ display:flex; gap:10px; flex-wrap:wrap; margin-top: 14px; }
-    .btn{
-      border: 1px solid #2b2f38;
-      border-radius: 12px;
-      padding: 10px 14px;
-      background: rgba(17,20,32,.85);
-      color: #9bdcff;
-      text-decoration: none;
-      font-size: 14px;
+    nav{display:flex;gap:10px;flex-wrap:wrap}
+    nav a{
+      padding:8px 10px;border-radius:12px;
+      border:1px solid rgba(36,38,43,.92);
+      background: rgba(12,13,18,.55);
+      color: var(--muted);
+      font-size:12.5px;
+      transition:.15s ease;
     }
-    .btn:hover{ text-decoration: underline; }
-    .mono{
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono","Courier New", monospace;
+    nav a:hover{transform:translateY(-1px);color:var(--text);border-color:rgba(124,246,200,.35)}
+    .hero{
+      margin-top:16px;
+      padding:22px 18px;
+      border-radius:var(--radius);
+      border:1px solid rgba(36,38,43,.9);
+      background: linear-gradient(180deg, rgba(15,17,23,.76), rgba(12,13,18,.62));
+      box-shadow: var(--shadow);
+      position:relative;
+      overflow:hidden;
     }
-    footer{ text-align:center; }
-    .sep{ height:1px; background:#24262b; margin: 14px 0; opacity:.9; }
+    .hero:before{
+      content:"";
+      position:absolute;inset:-2px;
+      background:
+        radial-gradient(520px 260px at 25% 20%, rgba(124,246,200,.14), transparent 60%),
+        radial-gradient(520px 260px at 78% 10%, rgba(138,162,255,.14), transparent 60%);
+      pointer-events:none;
+    }
+    .hero > *{position:relative}
+    h1{margin:0 0 10px;font-size:28px;line-height:1.1}
+    .sub{margin:0;color:var(--muted);max-width:900px;font-size:14.5px}
+    .mono{font-family:var(--mono)}
+    .kpis{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+    .pill{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:6px 10px;border-radius:999px;
+      border:1px solid rgba(36,38,43,.95);
+      background: rgba(12,13,18,.52);
+      color: var(--muted);
+      font-size:12px;
+    }
+    .pill b{color:var(--text)}
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:14px;margin-top:14px}
+    .card{
+      grid-column: span 6;
+      padding:16px 14px;
+      border-radius: var(--radius);
+      border:1px solid rgba(36,38,43,.9);
+      background: rgba(12,13,18,.55);
+      box-shadow: var(--shadow);
+      min-height: 160px;
+    }
+    .card.full{grid-column: span 12; min-height:auto}
+    .card h2{margin:0 0 8px;font-size:15px}
+    .card p{margin:0;color:var(--muted);font-size:13.5px}
+    ul.clean{margin:10px 0 0;padding:0 0 0 18px;color:var(--muted);font-size:13.5px}
+    ul.clean li{margin:6px 0}
+    .sectionTitle{
+      margin:2px 0 10px;
+      display:flex;align-items:center;gap:10px;
+      font-size:13.5px;color:var(--text);
+    }
+    .sectionTitle .bar{height:1px;flex:1;background:linear-gradient(90deg, rgba(124,246,200,.35), rgba(36,38,43,0))}
+    .note{
+      margin-top:10px;
+      padding:12px 14px;
+      border-radius:var(--radius);
+      border:1px solid rgba(255,211,122,.28);
+      background: rgba(255,211,122,.06);
+      color: var(--muted);
+      font-size:13px;
+    }
+    footer{
+      margin-top:16px;
+      padding:14px 14px;
+      border-radius: var(--radius);
+      border:1px solid rgba(36,38,43,.9);
+      background: rgba(12,13,18,.55);
+      color: var(--muted);
+      font-size:12.5px;
+      display:flex;gap:10px;flex-wrap:wrap;justify-content:space-between;align-items:center;
+    }
+    @media (max-width: 900px){
+      header{position:static}
+      .card{grid-column:span 12}
+      h1{font-size:24px}
+    }
   </style>
 </head>
+
 <body>
+  <div class="wrap">
 
-<header>
-  <div class="card">
-    <div class="tag">Policy Core · UE-first</div>
-    <h1>OPC — Opponible Policy Core</h1>
-    <h2>Regole opponibili, versionate, verificabili</h2>
-    <p>
-      OPC definisce le policy operative che vincolano lo stack **Hermeticum B.C.E.**.
-      Non esegue azioni: stabilisce le condizioni che rendono un’azione
-      <b>ammissibile o non ammissibile</b>, in modo citabile e verificabile nel tempo.
-    </p>
-    <p class="muted">
-      Regola: <span class="mono">se la policy non è definita → non è applicabile → non è verificabile</span>
-    </p>
-    <div class="btns">
-      <a class="btn" href="./README.md">README</a>
-      <a class="btn" href="https://github.com/manuelcoletta1-source/opc">Apri Repo</a>
-      <a class="btn" href="../unebdo/">UNEBDO</a>
-      <a class="btn" href="../hermeticum-bce-services/">Services HUB</a>
-    </div>
+    <header>
+      <div class="brand">
+        <div class="top">
+          <div class="name">OPC — Opponible Policy Core</div>
+          <span class="badge">UE-FIRST · POLICY · AUDIT · OPPONIBILITY</span>
+        </div>
+        <div class="sub" style="margin:0">
+          Regole applicate, non interpretate. Se non è verificabile, non vale.
+        </div>
+      </div>
+
+      <nav>
+        <a href="https://manuelcoletta1-source.github.io/hermeticum-bce-services/" target="_blank" rel="noopener">Services</a>
+        <a href="#cos-e">Cos’è</a>
+        <a href="#come-funziona">Come funziona</a>
+        <a href="#artefatti">Artefatti</a>
+      </nav>
+    </header>
+
+    <section class="hero" id="cos-e">
+      <h1>Policy opponibili, in formato macchina.</h1>
+      <p class="sub">
+        OPC è lo strato che trasforma “termini” e “regole” in <b>policy applicabili</b> e <b>verificabili</b>.
+        È il ponte tra identità (IPR), enforcement (UNEBDO) e decisione (AI JOKER).
+      </p>
+
+      <div class="kpis">
+        <span class="pill"><b>Determinismo</b> · stessa regola, stesso esito</span>
+        <span class="pill"><b>Audit-by-design</b> · traccia prima dell’opinione</span>
+        <span class="pill"><b>Fail-closed</b> · senza prova: stop</span>
+        <span class="pill"><b>Opponibilità</b> · difendibile nel tempo</span>
+      </div>
+
+      <div class="note">
+        <b>Principio operativo:</b> una policy non è “testo”. È un <span class="mono">vincolo eseguibile</span> con output
+        verificabile. Se manca requisito o evidenza, la policy non “interpreta”: <span class="mono">blocca</span>.
+      </div>
+    </section>
+
+    <section class="grid" id="come-funziona">
+      <div class="card">
+        <h2>Perché serve OPC</h2>
+        <p>
+          Senza OPC, le regole restano narrativa: ambigue, contestabili, dipendenti dall’operatore.
+          Con OPC, le regole diventano <b>oggetti tecnici</b>: valutabili, testabili, versionabili.
+        </p>
+        <ul class="clean">
+          <li>Riduce ambiguità e “interpretazione”</li>
+          <li>Rende la conformità verificabile</li>
+          <li>Uniforma le decisioni su scala</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Flusso minimo</h2>
+        <p>
+          OPC non decide “al posto di tutti”: definisce <b>come</b> si decide, e cosa è necessario per decidere.
+        </p>
+        <ul class="clean">
+          <li><b>Input</b>: IPR + richiesta + contesto</li>
+          <li><b>Policy</b>: requisiti, vincoli, condizioni</li>
+          <li><b>Evidence</b>: hash/firme/riferimenti</li>
+          <li><b>Output</b>: allow/deny + motivazione + traccia</li>
+        </ul>
+      </div>
+
+      <div class="card full" id="artefatti">
+        <div class="sectionTitle">Artefatti pubblici (minimali) <span class="bar"></span></div>
+        <p style="margin:0;color:var(--muted);font-size:13.5px">
+          In ottica GDPR-min, si pubblica solo ciò che serve: <b>hash</b>, <b>versione</b>, <b>riferimenti</b>.
+          Il contenuto sensibile resta sotto controllo. Il sistema resta verificabile.
+        </p>
+        <div class="kpis" style="margin-top:12px">
+          <span class="pill"><b>Policy ID</b> · <span class="mono">OPC-*</span></span>
+          <span class="pill"><b>Version</b> · <span class="mono">semver</span></span>
+          <span class="pill"><b>Evidence</b> · <span class="mono">hash-only</span></span>
+          <span class="pill"><b>Audit</b> · <span class="mono">append-only</span></span>
+        </div>
+
+        <div class="note" style="margin-top:12px">
+          <b>Nota:</b> questa pagina è la “vetrina” OPC. Le definizioni formali (policy file, schema, esempi)
+          vivono nel repo come sorgente versionata.
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div><b>OPC</b> — Opponible Policy Core · regole eseguibili · UE-first · auditabile</div>
+      <div>
+        <a href="https://manuelcoletta1-source.github.io/hermeticum-bce-services/" target="_blank" rel="noopener">Back to Services</a>
+      </div>
+    </footer>
+
   </div>
-</header>
-
-<main class="grid">
-
-  <section class="card">
-    <h3>Ruolo nello stack</h3>
-    <p class="muted">
-      OPC è a monte dell’enforcement. È la sorgente delle regole.
-    </p>
-    <p class="mono">
-      OPC → UNEBDO → IPR (CORE/GATE/COMPLY/EXCHANGE) → GitJoker-C2
-    </p>
-    <div class="sep"></div>
-    <p class="muted">
-      Senza policy esplicite, l’enforcement è indistinguibile da arbitrio.
-      Con OPC, ogni vincolo è dimostrabile.
-    </p>
-  </section>
-
-  <aside class="card">
-    <h3>Principi</h3>
-    <p class="muted">
-      • Policy esplicite<br/>
-      • Versioning obbligatorio<br/>
-      • Opponibilità nel tempo<br/>
-      • Audit-by-design<br/>
-      • Fail-closed by default<br/>
-      • UE-first
-    </p>
-    <div class="btns">
-      <a class="btn" href="../ipr-gate/">IPR-GATE</a>
-      <a class="btn" href="../ipr-comply./">IPR-COMPLY</a>
-    </div>
-  </aside>
-
-</main>
-
-<footer>
-  <p class="muted">
-    © Manuel Coletta<br/>
-    <b>Esoterologia Edizioni</b><br/>
-    OPC · Hermeticum B.C.E.
-  </p>
-</footer>
-
 </body>
 </html>
 
