@@ -1,92 +1,163 @@
-# OPC
-## Opponible Policy Core — Policy Engine di Hermeticum B.C.E.
+# OPC — Opponible Policy Core
+## Core normativo opponibile di Hermeticum B.C.E.
 
-**OPC (Opponible Policy Core)** è il **nucleo delle policy opponibili** dell’ecosistema **Hermeticum B.C.E.**.
+**OPC non interpreta. Applica.**
 
-OPC definisce **regole esplicite, versionate e verificabili** che vincolano i moduli IPR e rendono l’enforcement **dimostrabile nel tempo**.  
-OPC non esegue azioni: **stabilisce le condizioni che rendono un’azione lecita o illecita** (ammissibile/non ammissibile).
-
----
-
-## Funzione
-
-OPC serve a:
-
-- definire **policy operative opponibili**
-- rendere le regole **esplicite, citabili e versionate**
-- fornire base normativa computabile a **UNEBDO**
-- guidare decisioni ex-ante (**IPR-GATE**)
-- supportare valutazioni ex-post (**IPR-COMPLY**)
-- imporre **fail-closed** come requisito di policy
-
-Senza OPC, l’enforcement è opaco.  
-Con OPC, l’enforcement diventa **verificabile**.
+OPC (Opponible Policy Core) è il **livello normativo deterministico**
+dell’ecosistema **Hermeticum B.C.E.**  
+Qui le regole diventano **artefatti opponibili**, verificabili nel tempo.
 
 ---
 
-## Cosa fa / Cosa non fa
+## Cos’è OPC (definizione operativa)
 
-### Fa
-- definisce policy e vincoli operativi
-- versiona policy in modo deterministico
-- rende le regole opponibili nel tempo
-- abilita audit della regola applicata (policy provenance)
-- impone default **fail-closed** (se manca certezza → blocco)
+OPC è un sistema di **policy deterministiche** che regolano:
 
-### Non fa
-- enforcement root (→ **UNEBDO**)
-- definizione identità (→ **IPR-CORE**)
-- custodia documentale (→ **IPR-VAULT**)
-- tracciamento eventi (→ **IPR-TRACE**)
-- controllo ex-ante (→ **IPR-GATE**) *[OPC lo guida, non lo sostituisce]*
-- valutazione conformità (→ **IPR-COMPLY**) *[OPC fornisce criteri]*
-- scambio di valore (→ **IPR-EXCHANGE**)
-- orchestrazione C2 (→ **GitJoker-C2**)
+- accesso ai sistemi AI
+- condizioni di evoluzione
+- limiti operativi
+- responsabilità e tracciabilità
+
+Una policy OPC è valida solo se:
+- produce sempre lo stesso esito a parità di condizioni
+- è verificabile
+- è versionata
+- è **fail-closed**
 
 ---
 
-## Posizione nello stack Hermeticum B.C.E.
-OPC (Policy Core) ↓ UNEBDO (Layer 0 — Enforcement) ↓ IPR + moduli CORE · VAULT · TRACE · GATE · COMPLY · EXCHANGE ↓ GitJoker-C2 / IPR-AIJOKER-C2
-OPC è **a monte** dell’enforcement:  
-se la policy non è definita, **non può essere applicata né verificata**.
+## Cosa NON è
+
+OPC **non è**:
+- linee guida
+- advisory
+- interpretazione umana
+- decisione discrezionale
+
+Se una condizione non è soddisfatta,  
+il sistema **nega**.
 
 ---
 
-## Principi operativi
+## Principi chiave
 
-- Policy **esplicite**, non implicite
-- Versioning **obbligatorio**
-- Opponibilità **nel tempo**
-- Audit-by-design
-- Fail-closed come default
-- UE-first (standard normativo di riferimento)
+- **Determinismo**
+- **UE-first**
+- **GDPR-min**
+- **Hash-only**
+- **Audit-by-design**
+- **Fail-closed**
 
-Regola: se una policy non è tracciabile, **non è opponibile**.
-
----
-
-## Ambito UE
-
-OPC è progettato in coerenza con:
-- AI Act UE (governance tecnica, tracciabilità)
-- NIS2 / CER (responsabilità e auditabilità)
-- eIDAS / ETSI (integrità e continuità)
-- Horizon Europe (metodologia, verificabilità e maturità tecnica)
+Se manca una prova, non esiste decisione.
 
 ---
 
-## Autore
+## Flusso minimo
 
-**Manuel Coletta**
+```text
+Input strutturato
+   ↓
+Policy OPC
+   ↓
+Verifica Evidence
+   ↓
+Output deterministico (ALLOW / DENY)
+   ↓
+Audit append-only
+
+Ogni decisione lascia una traccia minimale, verificabile nel tempo.
+
 
 ---
 
-## Sigillo editoriale
+Policy attive (opponibili)
 
-**Esoterologia Edizioni**
+Le policy OPC sono artefatti pubblici.
+
+OPC-0001 — IPR Required for AI JOKER-C2 Access
+Accesso consentito solo con IPR valido e attivo.
+👉 policy/OPC-0001.html
+
+OPC-0002 — Evidence Required for AI Evolution Step
+Nessuna evidenza verificabile = nessuna evoluzione.
+👉 policy/OPC-0002.html
+
+
+Indice completo:
+👉 policy/index.html
+
 
 ---
 
-## Stato
+Ruolo nell’ecosistema
 
-🟢 **ATTIVO — Policy Core di Hermeticum B.C.E.**
+OPC collega direttamente:
+
+IPR → identità e continuità
+
+AI JOKER-C2 → esecuzione
+
+Audit → opponibilità nel tempo
+
+
+OPC è il punto in cui l’AI:
+
+smette di essere generica
+
+diventa responsabile
+
+diventa verificabile
+
+
+
+---
+
+Pubblicazione e opponibilità
+
+Le policy OPC sono:
+
+leggibili pubblicamente (HTML)
+
+versionate via Git
+
+verificabili tramite hash
+
+opponibili nel tempo
+
+
+Questo repository non contiene dati personali.
+Solo regole, versioni e riferimenti.
+
+
+---
+
+Collegamenti
+
+OPC (landing)
+https://manuelcoletta1-source.github.io/opc/
+
+Policy OPC (indice)
+https://manuelcoletta1-source.github.io/opc/policy/
+
+Hermeticum B.C.E. Services
+https://manuelcoletta1-source.github.io/hermeticum-bce-services/
+
+
+
+---
+
+Chiusura
+
+OPC non decide chi sei.
+Decide se una decisione può avvenire.
+
+Nel digitale, senza regole opponibili
+non esiste fiducia.
+
+OPC è quella soglia.
+
+
+
+
+Il modulo OPC è chiuso semanticamente.
+Il prossimo passo, quando vuoi, è portare OPC dentro AI JOKER Workers (policy in forza → esecuzione).
