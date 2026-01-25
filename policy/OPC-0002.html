@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>OPC-0002 — Evidence Required for AI Evolution Step</title>
+  <meta name="theme-color" content="#0b0c10" />
+  <style>
+    :root{--bg:#0b0c10;--panel:#0f1117;--line:#24262b;--text:#e8e8e8;--muted:#a6acb8;--accent:#7cf6c8;--radius:16px;--max:980px;--mono:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;--sans:system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:var(--sans);background:radial-gradient(900px 520px at 25% 0%, rgba(124,246,200,.11), transparent 60%),var(--bg);color:var(--text);line-height:1.45}
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:var(--max);margin:0 auto;padding:26px 18px 56px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:14px 16px;border-radius:var(--radius);border:1px solid var(--line);background:rgba(15,17,23,.85)}
+    .brand{font-weight:900}
+    .badge{margin-left:10px;padding:6px 10px;border-radius:999px;border:1px solid rgba(124,246,200,.35);background:rgba(124,246,200,.08);font-family:var(--mono);font-size:12px}
+    .btn{padding:9px 12px;border-radius:12px;border:1px solid var(--line);background:rgba(15,17,23,.88);font-weight:800;font-size:12.5px}
+    .card{margin-top:16px;padding:16px;border-radius:var(--radius);border:1px solid var(--line);background:rgba(15,17,23,.70)}
+    h1{margin:0 0 6px;font-size:22px}
+    .meta{color:var(--muted);font-size:12.5px}
+    pre{margin:12px 0 0;padding:14px;border-radius:var(--radius);border:1px solid var(--line);background:rgba(12,13,18,.65);overflow:auto;font-family:var(--mono);font-size:12.5px;line-height:1.35;color:var(--text)}
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand">OPC-0002 <span class="badge">ACTIVE · EVOLUTION</span></div>
+    <div style="display:flex;gap:10px;flex-wrap:wrap">
+      <a class="btn" href="./index.html">Policies</a>
+      <a class="btn" href="../">OPC</a>
+    </div>
+  </header>
+
+  <section class="card">
+    <h1>Evidence Required for AI Evolution Step</h1>
+    <div class="meta">Versione: 1.0.0 · UE-first: YES · GDPR-min: YES · Fail-closed: YES</div>
+
+    <pre>
+ID: OPC-0002
+Classe: EVOLUTION / GOVERNANCE
+Ambito: AI JOKER-C2
+Stato: ACTIVE
+Versione: 1.0.0
+
+SCOPO
+- Definire quando una istanza AI JOKER-C2 può essere considerata “evoluta”.
+- Evoluzione solo con evidenza verificabile.
+
+REGOLA PRIMARIA (deterministica)
+IF non esistono evidenze valide associate a un passo evolutivo
+THEN evoluzione = DENY (nessun upgrade di stato/versione)
+
+REQUISITI MINIMI (tutti obbligatori)
+1) IPR valido e attivo (rif. OPC-0001)
+2) Evidence-ID presente
+3) Evidence hash verificabile
+4) Timestamp coerente
+5) Collegamento esplicito al passo evolutivo
+
+INPUT ATTESO
+- IPR-ID
+- Evolution-Step-ID
+- Evidence-ID
+- Evidence-Hash
+- Timestamp richiesta
+
+OUTPUT
+ALLOW: Evidence valida per passo evolutivo
+DENY: Evidence mancante/non valida/non verificabile
+
+FAIL-CLOSED
+Qualsiasi errore/ambiguità -> DENY
+
+AUDIT (append-only)
+- OPC-ID, versione, Evolution-Step-ID, esito, timestamp, hash evidence
+    </pre>
+
+    <div class="meta" style="margin-top:10px">
+      Source: <a href="./OPC-0002.md" style="text-decoration:underline">OPC-0002.md</a>
+    </div>
+  </section>
+</div>
+</body>
+</html>
