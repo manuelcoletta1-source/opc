@@ -1,73 +1,31 @@
-# OPC — Opponible Policy Core
-## Core normativo opponibile di Hermeticum B.C.E.
+# OPC — Opponibilità Policy Computabile
 
-**OPC non interpreta. Applica.**
+OPC è il modulo di **valutazione delle policy computabili**
+nell’ecosistema Hermeticum B.C.E.
 
-OPC (Opponible Policy Core) è il **livello normativo deterministico**
-dell’ecosistema **Hermeticum B.C.E.**  
-Qui le regole diventano **artefatti opponibili**, verificabili nel tempo.
-![OPPONIBLE](https://img.shields.io/badge/OPPONIBLE-7cf6c8?style=flat-square)
-![FAIL-CLOSED](https://img.shields.io/badge/FAIL--CLOSED-enforced?style=flat-square)
-![UE-FIRST](https://img.shields.io/badge/UE--FIRST-003399?style=flat-square)
-![GDPR-MIN](https://img.shields.io/badge/GDPR--MIN-compliant?style=flat-square)
-![AUDIT-BY-DESIGN](https://img.shields.io/badge/AUDIT--BY--DESIGN-enabled?style=flat-square)
-![POLICY-ACTIVE](https://img.shields.io/badge/POLICY-ACTIVE?style=flat-square)
+È progettato per contesti **UE-first**, con approccio
+**audit-first** e **fail-closed**.
 
----
+## Funzione
+- valutazione di policy espresse in forma computabile
+- controllo di conformità ex-ante ed ex-post
+- produzione di esiti tecnici verificabili
 
-## Cos’è OPC (definizione operativa)
+## Principio chiave
+**FAIL-CLOSED**  
+Se una policy non verifica, l’operazione è negata.
 
-OPC è un sistema di **policy deterministiche** che regolano:
+## Non è
+- un sistema decisionale automatico
+- una fonte normativa
+- un sostituto dell’autorità pubblica
 
-- accesso ai sistemi AI
-- condizioni di evoluzione
-- limiti operativi
-- responsabilità e tracciabilità
+## Destinatari
+- enti pubblici
+- autorità di controllo
+- auditor
+- programmi UE di sperimentazione
 
-Una policy OPC è valida solo se:
-- produce sempre lo stesso esito a parità di condizioni
-- è verificabile
-- è versionata
-- è **fail-closed**
-
----
-
-## Cosa NON è
-
-OPC **non è**:
-- linee guida
-- advisory
-- interpretazione umana
-- decisione discrezionale
-
-Se una condizione non è soddisfatta,  
-il sistema **nega**.
-
----
-
-## Principi chiave
-
-- **Determinismo**
-- **UE-first**
-- **GDPR-min**
-- **Hash-only**
-- **Audit-by-design**
-- **Fail-closed**
-
-Se manca una prova, non esiste decisione.
-
----
-
-## Flusso minimo
-
-```text
-Input strutturato
-   ↓
-Policy OPC
-   ↓
-Verifica Evidence
-   ↓
-Output deterministico (ALLOW / DENY)
-   ↓
-Audit append-only
-
+## Collegamenti
+- Gateway UE: https://manuelcoletta1-source.github.io/hermeticum-bce-platform/
+- B2G: https://manuelcoletta1-source.github.io/hermeticum-bce-b2g/
