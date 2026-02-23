@@ -1,0 +1,29 @@
+{
+  "opc": "HBCE-OPC-v1",
+  "pack_id": "OFFICE_SAFE",
+  "policy": [
+    "UE_FIRST",
+    "AUDIT_FIRST",
+    "FAIL_CLOSED",
+    "HASH_ONLY",
+    "APPEND_ONLY",
+    "GDPR_MIN"
+  ],
+  "allowed_modes": [
+    "HOLD",
+    "EXPLORE_SLOW"
+  ],
+  "limits": {
+    "max_speed": 0.15,
+    "max_distance_m": 2.0,
+    "altitude_max_m": 2.0,
+    "collision_avoidance": "REQUIRED"
+  },
+  "integrity": {
+    "status": "UNSIGNED",
+    "kid": "NONE",
+    "signature": "NONE",
+    "hash": "PENDING"
+  },
+  "notes": "Fail-closed pack. If integrity is missing or invalid, execution must be denied."
+}
