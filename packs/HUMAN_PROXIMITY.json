@@ -14,16 +14,17 @@
     "FOLLOW_PROXIMITY"
   ],
   "limits": {
-    "follow_distance_m": 0.20,
-    "max_speed": 0.10,
+    "follow_distance_m": 0.2,
+    "max_speed": 0.1,
     "altitude_max_m": 2.2,
     "collision_avoidance": "REQUIRED"
   },
+  "notes": "Fail-closed pack. Intended for tight human proximity follow mode under strict limits.",
   "integrity": {
-    "status": "UNSIGNED",
+    "scheme": "HBCE-PAYLOAD-SHA256-CANONICAL-v1",
+    "payload_sha256": "adce7573847fa7a7331781cf8a7b444199cbdc2deaec35b1fc06f2348e912ce6",
+    "status": "HASH_ONLY",
     "kid": "NONE",
-    "signature": "NONE",
-    "hash": "PENDING"
-  },
-  "notes": "Fail-closed pack. Intended for tight human proximity follow mode under strict limits."
+    "signature": "NONE"
+  }
 }
