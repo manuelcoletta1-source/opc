@@ -22,7 +22,7 @@
   "notes": "Fail-closed pack. If integrity is missing or invalid, execution must be denied.",
   "integrity": {
     "scheme": "HBCE-PAYLOAD-SHA256-CANONICAL-v1",
-    "payload_sha256": "5a464ec54dcc723cb53a4dd615f03450320c08da5e966df737211cbfbf814269",
+    "payload_sha256": "41f99a93374b55cd9234ca21fff0bab1119dde39c49379edd065ee5375819d6b",
     "status": "HASH_ONLY",
     "kid": "NONE",
     "signature": "NONE"
