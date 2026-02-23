@@ -1,0 +1,29 @@
+{
+  "opc": "HBCE-OPC-v1",
+  "pack_id": "HUMAN_PROXIMITY",
+  "policy": [
+    "UE_FIRST",
+    "AUDIT_FIRST",
+    "FAIL_CLOSED",
+    "HASH_ONLY",
+    "APPEND_ONLY",
+    "GDPR_MIN"
+  ],
+  "allowed_modes": [
+    "HOLD",
+    "FOLLOW_PROXIMITY"
+  ],
+  "limits": {
+    "follow_distance_m": 0.20,
+    "max_speed": 0.10,
+    "altitude_max_m": 2.2,
+    "collision_avoidance": "REQUIRED"
+  },
+  "integrity": {
+    "status": "UNSIGNED",
+    "kid": "NONE",
+    "signature": "NONE",
+    "hash": "PENDING"
+  },
+  "notes": "Fail-closed pack. Intended for tight human proximity follow mode under strict limits."
+}
