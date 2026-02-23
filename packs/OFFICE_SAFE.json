@@ -19,11 +19,12 @@
     "altitude_max_m": 2.0,
     "collision_avoidance": "REQUIRED"
   },
+  "notes": "Fail-closed pack. If integrity is missing or invalid, execution must be denied.",
   "integrity": {
-    "status": "UNSIGNED",
+    "scheme": "HBCE-PAYLOAD-SHA256-CANONICAL-v1",
+    "payload_sha256": "5a464ec54dcc723cb53a4dd615f03450320c08da5e966df737211cbfbf814269",
+    "status": "HASH_ONLY",
     "kid": "NONE",
-    "signature": "NONE",
-    "hash": "PENDING"
-  },
-  "notes": "Fail-closed pack. If integrity is missing or invalid, execution must be denied."
+    "signature": "NONE"
+  }
 }
